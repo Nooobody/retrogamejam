@@ -7,21 +7,26 @@
 #include "Scroll.h"
 #include "SpriteManager.h"
 
-void Start_StateGame() {
+UINT8 collision_tiles[] = {1, 0};
+void Start_StateGame()
+{
 	UINT8 i;
 
 	SPRITES_8x16;
-	for(i = 0; i != N_SPRITE_TYPES; ++ i) {
+	for (i = 0; i != N_SPRITE_TYPES; ++i)
+	{
 		SpriteManagerLoad(i);
 	}
 	SHOW_SPRITES;
 
 	scroll_target = SpriteManagerAdd(SpritePlayer, 50, 50);
+	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
 	InitScrollTiles(0, &tiles);
-	InitScroll(&map, 0, 0);
+	InitScroll(&map, collision_tiles, 0);
 	SHOW_BKG;
 }
 
-void Update_StateGame() {
+void Update_StateGame()
+{
 }

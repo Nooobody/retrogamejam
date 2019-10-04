@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "deque": "cpp",
+        "type_traits": "cpp",
+        "xmemory0": "cpp"
+    }
+}
