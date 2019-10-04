@@ -2,6 +2,7 @@
 #include "Keys.h"
 #include "SpriteManager.h"
 #include "ZGBMain.h"
+#include "Print.h"
 
 const UINT8 anim_idle[] = {1, 0}; //The first number indicates the number of frames
 const UINT8 anim_walk[] = {2, 1, 2};
@@ -48,6 +49,7 @@ void Update_SpritePlayer()
 			}
 		}
 	}
+	DPRINT_POS(0, 0);
 }
 
 void Destroy_SpritePlayer()
