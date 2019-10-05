@@ -8,14 +8,16 @@ const UINT8 anim_idle[] = {1, 0}; //The first number indicates the number of fra
 const UINT8 anim_walk[] = {2, 1, 2};
 UINT8 frameCount = 0;
 UINT8 shootFrameCount = 0;
-bool shooting = false;
 UINT8 bulletCount;
 UINT8 playerX;
 UINT8 playerY;
 
+BOOLEAN shooting;
+
 void Start_SpritePlayer()
 {
 	bulletCount = 0;
+        shooting = FALSE;
 }
 
 void Update_SpritePlayer()
@@ -40,10 +42,10 @@ void Update_SpritePlayer()
 	}
 	if (KEY_PRESSED(J_B))
 	{
-                shooting = true;
+                shooting = TRUE;
 	}
         else if (shooting) {
-          shooting = false;
+          shooting = FALSE;
         }
 
         if (shooting) {
