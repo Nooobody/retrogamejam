@@ -9,6 +9,7 @@ struct EnemyInfo
     INT8 vx;
     INT8 vy;
     UINT16 frameCount;
+    UINT8 hitFrame;
 };
 
 void Start_SpriteEnemy()
