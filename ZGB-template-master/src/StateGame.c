@@ -12,6 +12,7 @@
 
 #include "Print.h"
 #include "../res/src/font.h"
+#include "rand.h"
 
 UINT8 collision_tiles[] = {1, 0};
 UINT8 time = 0;
@@ -50,7 +51,8 @@ void Update_StateGame()
 {
 	if (time % 120 == 0)
 	{
-		switch (rand() % 5)
+                int r = randv() % 5;
+		switch (r)
 		{
 		case 0:
 			SpriteManagerAdd(SpriteEnemy, 84 + rand() % 120 - 60, 0);
