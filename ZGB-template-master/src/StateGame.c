@@ -42,8 +42,18 @@ void Update_StateGame()
 {
 	if (time % 10000 == 0)
 	{
+          switch (rand() % 3) {
+            case 0:
 		SpriteManagerAdd(SpriteEnemy, rand() % 120 + 28, 0);
-                time = 0;
+                break;
+            case 1:
+		SpriteManagerAdd(SpriteEnemy2, rand() % 120 + 28, 0);
+                break;
+            case 2:
+		SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
+                break;
+          }
+          time = 0;
 	}
 	time++;
 }
