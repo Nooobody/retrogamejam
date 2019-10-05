@@ -22,7 +22,7 @@ extern UINT8 vittujes_mod_data[];
 void Start_StateGame()
 {
 	UINT8 i;
-        time = 0;
+	time = 0;
 
 	SPRITES_8x16;
 	for (i = 0; i != N_SPRITE_TYPES; ++i)
@@ -49,20 +49,24 @@ void Update_StateGame()
 {
 	if (time % 120 == 0)
 	{
-          switch (rand() % 3) {
-            case 0:
-		SpriteManagerAdd(SpriteEnemy, 84 + rand() % 120 - 60, 0);
-                break;
-            case 1:
-		SpriteManagerAdd(SpriteEnemy2, 84 + rand() % 120 - 60, 0);
-                break;
-            case 2:
-            default:
-                SpriteManagerAdd(SpriteEnemy3, 84 + rand() % 120 - 60, 0);
-          }
-          PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
-          time = 0;
-          spawnCounter++;
+		switch (rand() % 4)
+		{
+		case 0:
+			SpriteManagerAdd(SpriteEnemy, rand() % 120 + 28, 0);
+			break;
+		case 1:
+			SpriteManagerAdd(SpriteEnemy2, rand() % 120 + 28, 0);
+			break;
+		case 2:
+
+			SpriteManagerAdd(SpriteEnemy4, rand() % 120 + 28, 0);
+			break;
+		case 3:
+		default:
+			SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
+		}
+                PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
+		time = 0;
 	}
 	time++;
 }
