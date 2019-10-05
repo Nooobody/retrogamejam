@@ -15,7 +15,7 @@
 
 UINT8 collision_tiles[] = {1, 0};
 UINT8 time = 0;
-extern UINT8 spawnCounter = 0;
+UINT8 spawnCounter = 0;
 
 extern UINT8 vittujes_mod_data[];
 

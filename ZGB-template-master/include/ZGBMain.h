@@ -34,5 +34,6 @@
 extern UINT8 bulletCount;
 extern UINT8 enemyBulletCount;
 extern UINT8 playerScore;
+extern UINT8 spawnCounter;
 
 #endif
