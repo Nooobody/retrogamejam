@@ -3,6 +3,7 @@
         "deque": "cpp",
         "type_traits": "cpp",
         "xmemory0": "cpp",
-        "spritemanager.h": "c"
+        "spritemanager.h": "c",
+        "keys.h": "c"
     }
 }

@@ -7,7 +7,6 @@ struct BulletInfo
 {
     INT8 vy;
 };
-
 void Start_SpriteBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;

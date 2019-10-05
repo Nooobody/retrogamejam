@@ -7,14 +7,15 @@
 
 const UINT8 enemy_anim_kys[] = {5, 0, 1, 2, 3, 4}; //The first number indicates the number of frames
 
-struct KysData {
-  UINT8 frameCount;
+struct KysData
+{
+    UINT8 frameCount;
 };
 
 void Start_SpriteEnemykys()
 {
-  struct KysData *data = (struct KysData *)THIS->custom_data;
-  data->frameCount = 0;
+    struct KysData *data = (struct KysData *)THIS->custom_data;
+    data->frameCount = 0;
 }
 
 void Update_SpriteEnemykys()

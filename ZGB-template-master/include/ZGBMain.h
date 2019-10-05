@@ -15,6 +15,15 @@
     _SPRITE_DMG(SpriteStars, stars)             \
     _SPRITE_DMG(SpriteEnemykys, enemykys)       \
     _SPRITE_DMG(SpritePlayerkys, playerkys)     \
+    _SPRITE_DMG(SpriteOne, one)                 \
+    _SPRITE_DMG(SpriteTwo, two)                 \
+    _SPRITE_DMG(SpriteThree, three)             \
+    _SPRITE_DMG(SpriteFour, four)               \
+    _SPRITE_DMG(SpriteFive, five)               \
+    _SPRITE_DMG(SpriteSix, six)                 \
+    _SPRITE_DMG(SpriteSeven, seven)             \
+    _SPRITE_DMG(SpriteEight, eight)             \
+    _SPRITE_DMG(SpriteNine, nine)               \
     SPRITE_DEF_END
 
 #include "ZGBMain_Init.h"

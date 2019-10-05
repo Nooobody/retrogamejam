@@ -17,15 +17,9 @@ void Start_StateScore()
 {
     UINT8 i;
 
-    SPRITES_8x16;
-    for (i = 0; i != N_SPRITE_TYPES; ++i)
-    {
-        SpriteManagerLoad(i);
-    }
-    SHOW_SPRITES;
-
     InitScrollTiles(0, &font);
     InitScroll(&score, 0, 0);
+    SpriteManagerAdd(SpriteOne, 0, 0);
     SHOW_BKG;
     INIT_CONSOLE(font, 3, 2);
     MoveScroll(8, 8);
