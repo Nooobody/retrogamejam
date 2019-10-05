@@ -18,6 +18,7 @@ UINT8 time = 0;
 void Start_StateGame()
 {
 	UINT8 i;
+        time = 0;
 
 	SPRITES_8x16;
 	for (i = 0; i != N_SPRITE_TYPES; ++i)
@@ -40,9 +41,20 @@ void Start_StateGame()
 
 void Update_StateGame()
 {
-	if (time % 10000 == 0)
+	if (time % 300 == 0)
 	{
-		SpriteManagerAdd(SpriteEnemy, 70, 16);
+          switch (rand() % 3) {
+            case 0:
+		SpriteManagerAdd(SpriteEnemy, rand() % 120 + 28, 0);
+                break;
+            case 1:
+		SpriteManagerAdd(SpriteEnemy2, rand() % 120 + 28, 0);
+                break;
+            case 2:
+            default:
+                SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
+          }
+          time = 0;
 	}
 	time++;
 }

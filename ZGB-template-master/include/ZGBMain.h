@@ -10,6 +10,8 @@
 #define SPRITES                                 \
     _SPRITE_DMG(SpritePlayer, player)           \
     _SPRITE_DMG(SpriteEnemy, enemy)             \
+    _SPRITE_DMG(SpriteEnemy2, enemy2)             \
+    _SPRITE_DMG(SpriteEnemy3, enemy3)             \
     _SPRITE_DMG(SpriteBullet, bullet)           \
     _SPRITE_DMG(SpriteEnemyBullet, enemybullet) \
     _SPRITE_DMG(SpriteStars, stars)             \

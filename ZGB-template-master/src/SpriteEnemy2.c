@@ -13,7 +13,7 @@ struct EnemyInfo
     UINT8 health;
 };
 
-void Start_SpriteEnemy()
+void Start_SpriteEnemy2()
 {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
     data->vx = 1;
@@ -23,7 +23,7 @@ void Start_SpriteEnemy()
     data->health = 3;
 }
 
-void Update_SpriteEnemy()
+void Update_SpriteEnemy2()
 {
     struct Sprite *spr;
     UINT8 i;
@@ -54,12 +54,12 @@ void Update_SpriteEnemy()
         {
             if (CheckCollision(THIS, spr))
             {
-              data->health -= 1;
-              SpriteManagerRemoveSprite(spr);
-              if (data->health == 0) {
-                SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
-                SpriteManagerRemoveSprite(THIS);
-              }
+                data->health -= 1;
+                SpriteManagerRemoveSprite(spr);
+                if (data->health == 0) {
+                  SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
+                  SpriteManagerRemoveSprite(THIS);
+                }
             }
         }
     }
@@ -76,6 +76,6 @@ void Update_SpriteEnemy()
     data->frameCount++;
 }
 
-void Destroy_SpriteEnemy()
+void Destroy_SpriteEnemy2()
 {
 }
