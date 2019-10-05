@@ -82,4 +82,5 @@ void Update_SpriteEnemy()
 
 void Destroy_SpriteEnemy()
 {
+    playerScore += 5;
 }
