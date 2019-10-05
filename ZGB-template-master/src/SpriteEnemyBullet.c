@@ -18,10 +18,11 @@ void Start_SpriteEnemyBullet()
 void Update_SpriteEnemyBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
-    if (TranslateSprite(THIS, 0, data->vy))
-    {
-        SpriteManagerRemoveSprite(THIS);
-    }
+    THIS->y += 2;
+    // if (TranslateSprite(THIS, 0, data->vy))
+    // {
+        // SpriteManagerRemoveSprite(THIS);
+    // }
 }
 
 void Destroy_SpriteEnemyBullet()

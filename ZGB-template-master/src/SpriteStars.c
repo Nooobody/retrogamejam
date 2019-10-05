@@ -22,10 +22,11 @@ void Start_SpriteStars()
 void Update_SpriteStars()
 {
     // struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
-    if (TranslateSprite(THIS, 0, 4))
-    {
-        SpriteManagerRemoveSprite(THIS);
-    }
+    THIS->y += 4;
+    // if (TranslateSprite(THIS, 0, 4))
+    // {
+        // SpriteManagerRemoveSprite(THIS);
+    // }
     // frameCount++;
 }
 
