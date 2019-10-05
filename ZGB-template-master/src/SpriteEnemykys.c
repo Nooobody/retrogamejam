@@ -9,7 +9,7 @@ const UINT8 enemy_anim_kys[] = {5, 0, 1, 2, 3, 4}; //The first number indicates 
 
 struct KysData {
   UINT8 frameCount;
-}
+};
 
 void Start_SpriteEnemykys()
 {
