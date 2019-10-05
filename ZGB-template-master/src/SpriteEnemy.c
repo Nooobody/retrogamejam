@@ -10,6 +10,7 @@ struct EnemyInfo
     INT8 vy;
     UINT16 frameCount;
     UINT8 hitFrame;
+    UINT8 health;
 };
 
 void Start_SpriteEnemy()
@@ -19,6 +20,7 @@ void Start_SpriteEnemy()
     data->vy = 0;
     data->frameCount = 1;
     data->hitFrame = 150 + rand() % 40 - 20;
+    data->health = 3;
 }
 
 void Update_SpriteEnemy()
@@ -52,9 +54,12 @@ void Update_SpriteEnemy()
         {
             if (CheckCollision(THIS, spr))
             {
+              data->health -= 1;
+              if (data->health == 0) {
                 SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
                 SpriteManagerRemoveSprite(spr);
                 SpriteManagerRemoveSprite(THIS);
+              }
             }
         }
     }
