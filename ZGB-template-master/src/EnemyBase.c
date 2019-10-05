@@ -60,7 +60,7 @@ void EnemyUpdate(struct Sprite* THIS) {
         }
     }
 
-    if (data->frameCount % (50 - spawnCounter / 3) == 0)
+    if (data->frameCount % (50 - spawnCounter) == 0)
     {
         THIS->y += 1;
     }
