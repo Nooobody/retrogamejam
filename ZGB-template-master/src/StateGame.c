@@ -46,7 +46,7 @@ void Start_StateGame()
 
 void Update_StateGame()
 {
-	if (time % 300 == 0)
+	if (time % 120 == 0)
 	{
           switch (rand() % 3) {
             case 0:

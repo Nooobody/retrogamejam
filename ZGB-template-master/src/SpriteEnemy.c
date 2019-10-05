@@ -59,6 +59,7 @@ void Update_SpriteEnemy()
                 SpriteManagerRemoveSprite(spr);
                 if (data->health == 0)
                 {
+                    playerScore += 5;
                     SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
                     SpriteManagerRemoveSprite(THIS);
                 }
