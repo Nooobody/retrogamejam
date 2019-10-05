@@ -7,6 +7,8 @@
 const UINT8 anim_idle[] = {1, 0}; //The first number indicates the number of frames
 const UINT8 anim_walk[] = {2, 1, 2};
 UINT8 frameCount = 0;
+UINT8 shootFrameCount = 0;
+bool shooting = false;
 UINT8 bulletCount;
 UINT8 playerX;
 UINT8 playerY;
@@ -38,20 +40,38 @@ void Update_SpritePlayer()
 	}
 	if (KEY_PRESSED(J_B))
 	{
-		if (frameCount % 20 == 0)
-		{
-			if (bulletCount < 4)
-			{
-				SpriteManagerAdd(SpriteBullet, playerX, playerY - 8);
-				bulletCount++;
-			}
-		}
+                shooting = true;
 	}
+        else if (shooting) {
+          shooting = false;
+        }
+
+        if (shooting) {
+          shootFrameCount++;
+          if (shootFrameCount % 20 == 0) {
+            if (bulletCount < 4)
+            {
+              SpriteManagerAdd(SpriteBullet, playerX, playerY - 8);
+              bulletCount++;
+            }
+          }
+        }
+        else if (shootFrameCount % 20 > 0) {
+          shootFrameCount++;
+          if (shootFrameCount % 20 == 0) {
+            shootFrameCount = 0;
+          }
+        }
+
 	if (frameCount > 100)
 	{
 		frameCount = 0;
 	}
 	frameCount++;
+
+        if (shootFrameCount > 100) {
+          shootFrameCount = 0;
+        }
 
 	if (keys == 0)
 	{

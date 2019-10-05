@@ -14,7 +14,7 @@ struct StarInfo {
 void Start_SpriteStar()
 {
     struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
-    data->vy = rand() % 10;
+    data->vy = rand() % 5;
 }
 
 void Update_SpriteStar()
@@ -29,6 +29,6 @@ void Update_SpriteStar()
 
 void Destroy_SpriteStar()
 {
-    SpriteManagerAdd(SpriteStar, rand() % 140 + 10, 10);
+    SpriteManagerAdd(SpriteStar, rand() % 120 + 30, 10);
 }
 
