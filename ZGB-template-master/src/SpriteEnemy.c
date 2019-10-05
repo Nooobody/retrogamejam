@@ -22,10 +22,10 @@ void Update_SpriteEnemy()
     struct Sprite *spr;
     UINT8 i;
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    /*if (TranslateSprite(THIS, data->vx, data->vy))
+    if (TranslateSprite(THIS, data->vx, data->vy))
     {
         data->vx = -data->vx;
-    }*/
+    }
     SPRITEMANAGER_ITERATE(i, spr)
     {
         if (spr->type == SpriteBullet)

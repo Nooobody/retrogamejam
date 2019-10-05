@@ -26,7 +26,6 @@ void Start_StateGame()
 	SHOW_SPRITES;
 	//scroll_target =
 	SpriteManagerAdd(SpritePlayer, 50, 130);
-	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
 	SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
 
@@ -34,14 +33,14 @@ void Start_StateGame()
 	InitScroll(&scrollingmap, collision_tiles, 0);
 	SHOW_BKG;
 	INIT_CONSOLE(font, 3, 2);
-        MoveScroll(8, 16);
+	MoveScroll(8, 16);
 }
 
 void Update_StateGame()
 {
-	if (time % 100 == 0)
+	if (time % 10000 == 0)
 	{
-		//SpriteManagerAdd(SpriteEnemy, 70, 50);
+		SpriteManagerAdd(SpriteEnemy, 70, 16);
 	}
 	time++;
 }
