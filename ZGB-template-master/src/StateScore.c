@@ -24,35 +24,35 @@ void Start_StateScore()
 
         switch (digit) {
           case 1:
-            SpriteManagerAdd(SpriteOne, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteOne, 120 - 8 * i, 56);
             break;
           case 2:
-            SpriteManagerAdd(SpriteTwo, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteTwo, 120 - 8 * i, 56);
             break;
           case 3:
-            SpriteManagerAdd(SpriteThree, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteThree, 120 - 8 * i, 56);
             break;
           case 4:
-            SpriteManagerAdd(SpriteFour, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteFour, 120 - 8 * i, 56);
             break;
           case 5:
-            SpriteManagerAdd(SpriteFive, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteFive, 120 - 8 * i, 56);
             break;
           case 6:
-            SpriteManagerAdd(SpriteSix, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteSix, 120 - 8 * i, 56);
             break;
           case 7:
-            SpriteManagerAdd(SpriteSeven, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteSeven, 120 - 8 * i, 56);
             break;
           case 8:
-            SpriteManagerAdd(SpriteEight, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteEight, 120 - 8 * i, 56);
             break;
           case 9:
-            SpriteManagerAdd(SpriteNine, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteNine, 120 - 8 * i, 56);
             break;
           case 0:
           default:
-            SpriteManagerAdd(SpriteZero, 112 - 8 * i, 56);
+            SpriteManagerAdd(SpriteZero, 120 - 8 * i, 56);
             break;
         }
     }
