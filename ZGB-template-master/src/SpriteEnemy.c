@@ -13,7 +13,15 @@ struct EnemyInfo
 void Start_SpriteEnemy()
 {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    data->vx = 2;
+    UINT8 dir = rand() % 2;
+    if (dir == 0)
+    {
+        data->vx = 2;
+    }
+    else
+    {
+        data->vx = -2;
+    }
     data->vy = 1;
 }
 
@@ -22,15 +30,18 @@ void Update_SpriteEnemy()
     struct Sprite *spr;
     UINT8 i;
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    
-    if (THIS->y < 140) {
-      if (TranslateSprite(THIS, data->vx, data->vy)) {
-        data->vx = -data->vx;
-      }
+
+    if (THIS->y < 140)
+    {
+        if (TranslateSprite(THIS, data->vx, data->vy))
+        {
+            data->vx = -data->vx;
+        }
     }
-    else {
-      THIS->x += data->vx;
-      THIS->y += data->vy;
+    else
+    {
+        THIS->x += data->vx;
+        THIS->y += data->vy;
     }
 
     SPRITEMANAGER_ITERATE(i, spr)
