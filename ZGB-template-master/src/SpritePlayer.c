@@ -8,8 +8,13 @@ const UINT8 anim_idle[] = {1, 0}; //The first number indicates the number of fra
 const UINT8 anim_walk[] = {2, 1, 2};
 UINT8 frameCount = 0;
 UINT8 shootFrameCount = 0;
+UINT8 scoreFrameCount = 0;
 UINT8 bulletCount;
+<<<<<<< HEAD
+UINT8 score;
+=======
 UINT8 enemyBulletCount;
+>>>>>>> 49bf64cadab163331ccc40e58d6bbb9d0bff505e
 UINT8 playerX;
 UINT8 playerY;
 
@@ -18,13 +23,24 @@ BOOLEAN shooting;
 void Start_SpritePlayer()
 {
 	bulletCount = 0;
+<<<<<<< HEAD
+	score = 0;
+	shooting = FALSE;
+=======
         enemyBulletCount = 0;
         shooting = FALSE;
+>>>>>>> 49bf64cadab163331ccc40e58d6bbb9d0bff505e
 }
 
 void Update_SpritePlayer()
 {
 	UINT8 i;
+	if (scoreFrameCount % 60 == 0)
+	{
+		scoreFrameCount += 10;
+	}
+
+	score++;
 	struct Sprite *spr;
 	if (KEY_PRESSED(J_UP))
 	{
@@ -44,28 +60,33 @@ void Update_SpritePlayer()
 	}
 	if (KEY_PRESSED(J_B))
 	{
-                shooting = TRUE;
+		shooting = TRUE;
 	}
-        else if (shooting) {
-          shooting = FALSE;
-        }
+	else if (shooting)
+	{
+		shooting = FALSE;
+	}
 
-        if (shooting) {
-          if (shootFrameCount % 20 == 0) {
-            if (bulletCount < 4)
-            {
-              SpriteManagerAdd(SpriteBullet, playerX, playerY - 8);
-              bulletCount++;
-            }
-          }
-          shootFrameCount++;
-        }
-        else if (shootFrameCount % 20 > 0) {
-          shootFrameCount++;
-          if (shootFrameCount % 20 == 0) {
-            shootFrameCount = 0;
-          }
-        }
+	if (shooting)
+	{
+		if (shootFrameCount % 20 == 0)
+		{
+			if (bulletCount < 4)
+			{
+				SpriteManagerAdd(SpriteBullet, playerX, playerY - 8);
+				bulletCount++;
+			}
+		}
+		shootFrameCount++;
+	}
+	else if (shootFrameCount % 20 > 0)
+	{
+		shootFrameCount++;
+		if (shootFrameCount % 20 == 0)
+		{
+			shootFrameCount = 0;
+		}
+	}
 
 	if (frameCount > 100)
 	{
@@ -73,9 +94,10 @@ void Update_SpritePlayer()
 	}
 	frameCount++;
 
-        if (shootFrameCount == 100) {
-          shootFrameCount = 0;
-        }
+	if (shootFrameCount == 100)
+	{
+		shootFrameCount = 0;
+	}
 
 	if (keys == 0)
 	{
@@ -87,7 +109,7 @@ void Update_SpritePlayer()
 		{
 			if (CheckCollision(THIS, spr))
 			{
-				SetState(StateGame);
+				SetState(StateScore);
 			}
 		}
 	}
