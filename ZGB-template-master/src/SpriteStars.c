@@ -5,29 +5,28 @@
 #include "ZGBMain.h"
 #include "Print.h"
 
-UINT8 frameCount = 0;
-const UINT8 star_anim_idle[] = {2, 0, 1}; //The first number indicates the number of frames
+// UINT8 frameCount = 0;
 
-struct StarInfo
-{
-    UINT8 vy;
-};
+// struct StarInfo
+// {
+    // UINT8 vy;
+// };
 
 void Start_SpriteStars()
 {
-    struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
-    data->vy = rand() % 2;
+    // struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
+    //data->vy = rand() % 2 + 1;
+    //data->vy = 2;
 }
 
 void Update_SpriteStars()
 {
-    struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
-    if (frameCount % data->vy == 0 && TranslateSprite(THIS, 0, 1))
+    // struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
+    if (TranslateSprite(THIS, 0, 4))
     {
         SpriteManagerRemoveSprite(THIS);
     }
-    frameCount++;
-    SetSpriteAnim(THIS, star_anim_idle, 15);
+    // frameCount++;
 }
 
 void Destroy_SpriteStars()
