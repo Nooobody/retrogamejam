@@ -33,11 +33,7 @@ void Start_StateGame()
 	InitScroll(&scrollingmap, collision_tiles, 0);
 	SHOW_BKG;
 	INIT_CONSOLE(font, 3, 2);
-<<<<<<< HEAD
-	MoveScroll(8, 8);
-=======
 	MoveScroll(8, 16);
->>>>>>> 40564a285723b9c4933df82c70f3d4a6d63b24a7
 }
 
 void Update_StateGame()
