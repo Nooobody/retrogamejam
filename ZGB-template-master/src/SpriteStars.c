@@ -21,13 +21,13 @@ void Start_SpriteStars()
 
 void Update_SpriteStars()
 {
-    SetSpriteAnim(THIS, anim_idle, 15);
     struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
     if (frameCount % data->vy == 0 && TranslateSprite(THIS, 0, 1))
     {
         SpriteManagerRemoveSprite(THIS);
     }
     frameCount++;
+    SetSpriteAnim(THIS, anim_idle, 15);
 }
 
 void Destroy_SpriteStars()
