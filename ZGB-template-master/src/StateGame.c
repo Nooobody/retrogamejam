@@ -35,8 +35,8 @@ void Start_StateGame()
 	//scroll_target =
 	SpriteManagerAdd(SpritePlayer, 50, 130);
 
-	SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
-	SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 100);
+	SpriteManagerAdd(SpriteStars, randw() % 120 + 30, 10);
+	SpriteManagerAdd(SpriteStars, randw() % 120 + 30, 100);
 
 	InitScrollTiles(0, &tiles);
 	InitScroll(&scrollingmap, collision_tiles, 0);
@@ -51,24 +51,23 @@ void Update_StateGame()
 {
 	if (time % 120 == 0)
 	{
-                int r = randv() % 5;
-		switch (r)
+		switch (randw() % 5)
 		{
 		case 0:
-			SpriteManagerAdd(SpriteEnemy, 84 + rand() % 120 - 60, 0);
+			SpriteManagerAdd(SpriteEnemy, 84 + randw() % 120 - 60, 0);
 			break;
 		case 1:
-			SpriteManagerAdd(SpriteEnemy2, 84 + rand() % 120 - 60, 0);
+			SpriteManagerAdd(SpriteEnemy2, 84 + randw() % 120 - 60, 0);
 			break;
 		case 2:
-			SpriteManagerAdd(SpriteEnemy3, 84 + rand() % 120 - 60, 0);
+			SpriteManagerAdd(SpriteEnemy3, 84 + randw() % 120 - 60, 0);
 			break;
 		case 3:
-			SpriteManagerAdd(SpriteEnemy4, 84 + rand() % 120 - 60, 0);
+			SpriteManagerAdd(SpriteEnemy4, 84 + randw() % 120 - 60, 0);
 			break;
 		case 4:
 		default:
-			SpriteManagerAdd(SpriteEnemy5, 84 + rand() % 120 - 60, 0);
+			SpriteManagerAdd(SpriteEnemy5, 84 + randw() % 120 - 60, 0);
 		}
                 PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
 		time = 0;
