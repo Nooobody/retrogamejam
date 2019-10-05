@@ -16,53 +16,46 @@
 void Start_StateScore()
 {
     UINT8 i = 0;
-    char *scoreText;
-    UIntToString(playerScore, scoreText);
+    UINT16 tempScore = playerScore;
     for (i; i < 5; ++i)
     {
-        if (scoreText[i] == '\0')
-        {
-            break;
-        }
-        if (scoreText[i] == '0')
-        {
+        int digit = tempScore % 10;
+        tempScore /= 10;
+
+        switch (digit) {
+          case 0:
             SpriteManagerAdd(SpriteZero, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '1')
-        {
+            break;
+          case 1:
             SpriteManagerAdd(SpriteOne, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '2')
-        {
+            break;
+          case 2:
             SpriteManagerAdd(SpriteTwo, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '3')
-        {
+            break;
+          case 3:
             SpriteManagerAdd(SpriteThree, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '4')
-        {
+            break;
+          case 4:
             SpriteManagerAdd(SpriteFour, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '5')
-        {
+            break;
+          case 5:
             SpriteManagerAdd(SpriteFive, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '6')
-        {
+            break;
+          case 6:
             SpriteManagerAdd(SpriteSix, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '7')
-        {
+            break;
+          case 7:
             SpriteManagerAdd(SpriteSeven, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '8')
-        {
+            break;
+          case 8:
             SpriteManagerAdd(SpriteEight, 80 + 8 * i, 56);
-        }
-        else if (scoreText[i] == '9')
-        {
+            break;
+          case 9:
             SpriteManagerAdd(SpriteNine, 80 + 8 * i, 56);
+            break;
+          default:
+            SpriteManagerAdd(SpriteZero, 80 + 8 * i, 56);
+            break;
         }
     }
 
