@@ -7,21 +7,18 @@
     _STATE(StateScore) \
     STATE_DEF_END
 
-#define SPRITES                           \
-    _SPRITE_DMG(SpritePlayer, player)     \
-    _SPRITE_DMG(SpriteEnemy, enemy)       \
-    _SPRITE_DMG(SpriteBullet, bullet)     \
-    _SPRITE_DMG(SpriteEnemyBullet, enemybullet)     \
-    _SPRITE_DMG(SpriteStars, stars)       \
-    _SPRITE_DMG(SpriteEnemykys, enemykys) \
+#define SPRITES                                 \
+    _SPRITE_DMG(SpritePlayer, player)           \
+    _SPRITE_DMG(SpriteEnemy, enemy)             \
+    _SPRITE_DMG(SpriteBullet, bullet)           \
+    _SPRITE_DMG(SpriteEnemyBullet, enemybullet) \
+    _SPRITE_DMG(SpriteStars, stars)             \
+    _SPRITE_DMG(SpriteEnemykys, enemykys)       \
     SPRITE_DEF_END
 
 #include "ZGBMain_Init.h"
 extern UINT8 bulletCount;
-<<<<<<< HEAD
 extern UINT8 score;
-=======
 extern UINT8 enemyBulletCount;
->>>>>>> 49bf64cadab163331ccc40e58d6bbb9d0bff505e
 
 #endif
