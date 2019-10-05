@@ -52,6 +52,8 @@ void Update_StateGame()
             case 2:
 		SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
                 break;
+            default:
+                SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
           }
           time = 0;
 	}
