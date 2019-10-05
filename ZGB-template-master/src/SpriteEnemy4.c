@@ -66,7 +66,7 @@ void Update_SpriteEnemy4()
         }
     }
 
-    if (data->frameCount % 50 == 0)
+    if (data->frameCount % (50 - spawnCounter / 3) == 0)
     {
         THIS->y += 1;
     }
