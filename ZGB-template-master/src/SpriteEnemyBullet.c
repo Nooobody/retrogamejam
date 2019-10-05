@@ -9,13 +9,13 @@ struct BulletInfo
     INT8 vy;
 };
 
-void Start_SpriteBullet()
+void Start_SpriteEnemyBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
     data->vy = 2;
 }
 
-void Update_SpriteBullet()
+void Update_SpriteEnemyBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
     if (TranslateSprite(THIS, 0, data->vy))
@@ -24,7 +24,7 @@ void Update_SpriteBullet()
     }
 }
 
-void Destroy_SpriteBullet()
+void Destroy_SpriteEnemyBullet()
 {
     enemyBulletCount--;
 }
