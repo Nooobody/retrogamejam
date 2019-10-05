@@ -70,7 +70,6 @@ void EnemyUpdate(struct Sprite* THIS) {
 }
 
 void EnemyDestroy(struct Sprite* THIS) {
-    playerScore += 5;
 }
 
 #endif
