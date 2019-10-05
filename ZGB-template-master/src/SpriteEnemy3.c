@@ -55,9 +55,9 @@ void Update_SpriteEnemy3()
             if (CheckCollision(THIS, spr))
             {
                 data->health -= 1;
+                SpriteManagerRemoveSprite(spr);
                 if (data->health == 0) {
                   SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
-                  SpriteManagerRemoveSprite(spr);
                   SpriteManagerRemoveSprite(THIS);
                 }
             }
