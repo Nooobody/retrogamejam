@@ -36,7 +36,7 @@ void Start_StateGame()
 	SHOW_BKG;
 	INIT_CONSOLE(font, 3, 2);
 
-        MoveScroll(1, 1);
+        MoveScroll(8, 8);
 }
 
 void Update_StateGame()
