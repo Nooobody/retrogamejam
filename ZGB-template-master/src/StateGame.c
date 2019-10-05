@@ -18,6 +18,7 @@ UINT8 time = 0;
 void Start_StateGame()
 {
 	UINT8 i;
+        time = 0;
 
 	SPRITES_8x16;
 	for (i = 0; i != N_SPRITE_TYPES; ++i)
@@ -40,7 +41,7 @@ void Start_StateGame()
 
 void Update_StateGame()
 {
-	if (time % 1000 == 0)
+	if (time % 300 == 0)
 	{
           switch (rand() % 3) {
             case 0:
