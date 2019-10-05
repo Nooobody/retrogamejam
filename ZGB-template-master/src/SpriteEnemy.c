@@ -22,16 +22,24 @@ void Update_SpriteEnemy()
     struct Sprite *spr;
     UINT8 i;
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    if (TranslateSprite(THIS, data->vx, data->vy))
-    {
+    
+    if (THIS->y < 140) {
+      if (TranslateSprite(THIS, data->vx, data->vy)) {
         data->vx = -data->vx;
+      }
     }
+    else {
+      THIS->x += data->vx;
+      THIS->y += data->vy;
+    }
+
     SPRITEMANAGER_ITERATE(i, spr)
     {
         if (spr->type == SpriteBullet)
         {
             if (CheckCollision(THIS, spr))
             {
+                SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
                 SpriteManagerRemoveSprite(spr);
                 SpriteManagerRemoveSprite(THIS);
             }
@@ -41,5 +49,4 @@ void Update_SpriteEnemy()
 
 void Destroy_SpriteEnemy()
 {
-  SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
 }
