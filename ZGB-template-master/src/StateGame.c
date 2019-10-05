@@ -22,7 +22,7 @@ void Start_StateGame()
 		SpriteManagerLoad(i);
 	}
 	SHOW_SPRITES;
-	scroll_target = SpriteManagerAdd(SpritePlayer, 50, 360);
+	scroll_target = SpriteManagerAdd(SpritePlayer, 50, 130);
 
         SpriteManagerAdd(SpriteStar, rand() % 160 + 10, 10);
         SpriteManagerAdd(SpriteStar, rand() % 160 + 10, 10);
@@ -38,7 +38,7 @@ void Update_StateGame()
 {
 	if (time % 100 == 0)
 	{
-		SpriteManagerAdd(SpriteEnemy, 70, 50);
+		//SpriteManagerAdd(SpriteEnemy, 70, 50);
 	}
 	time++;
 }
