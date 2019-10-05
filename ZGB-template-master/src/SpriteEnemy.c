@@ -13,7 +13,7 @@ struct EnemyInfo
 void Start_SpriteEnemy()
 {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    data->vx = 0;
+    data->vx = 2;
     data->vy = 1;
 }
 
