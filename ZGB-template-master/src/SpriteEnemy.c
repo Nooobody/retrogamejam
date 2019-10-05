@@ -8,13 +8,15 @@ struct EnemyInfo
 {
     INT8 vx;
     INT8 vy;
+    UINT16 frameCount;
 };
 
 void Start_SpriteEnemy()
 {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
     data->vx = 2;
-    data->vy = 1;
+    data->vy = 0;
+    data->frameCount = 0;
 }
 
 void Update_SpriteEnemy()
@@ -44,6 +46,16 @@ void Update_SpriteEnemy()
                 SpriteManagerRemoveSprite(THIS);
             }
         }
+    }
+
+    if (data->frameCount % 150 == 0 && enemyBulletCount < 3) {
+      SpriteManagerAdd(SpriteEnemyBullet, THIS->x, THIS->y + 16);
+      enemyBulletCount++;
+    } 
+
+    data->frameCount++;
+    if (data->frameCount == 300) {
+      data->frameCount = 0;
     }
 }
 
