@@ -3,7 +3,13 @@
 #include "Print.h"
 #include "SpriteManager.h"
 
+#include "ZGBMain.h"
+
 UINT8 frameCount = 0;
+
+struct StarInfo {
+  UINT8 vy;
+};
 
 void Start_SpriteStar()
 {
@@ -23,6 +29,6 @@ void Update_SpriteStar()
 
 void Destroy_SpriteStar()
 {
-  SpriteManagerAddSprite(SpriteStar, rand() % 140 + 10, 10);
+    SpriteManagerAdd(SpriteStar, rand() % 140 + 10, 10);
 }
 
