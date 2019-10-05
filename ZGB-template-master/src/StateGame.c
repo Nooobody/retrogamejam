@@ -40,7 +40,7 @@ void Start_StateGame()
 
 void Update_StateGame()
 {
-	if (time % 10000 == 0)
+	if (time % 1000 == 0)
 	{
           switch (rand() % 3) {
             case 0:

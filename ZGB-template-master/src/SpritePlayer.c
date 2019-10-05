@@ -100,7 +100,7 @@ void Update_SpritePlayer()
 	}
 	SPRITEMANAGER_ITERATE(i, spr)
 	{
-		if (spr->type == SpriteEnemy || spr->type == SpriteEnemyBullet)
+		if (spr->type == SpriteEnemy || spr->type == SpriteEnemy2 || spr->type == SpriteEnemy3 || spr->type == SpriteEnemyBullet)
 		{
 			if (CheckCollision(THIS, spr))
 			{
