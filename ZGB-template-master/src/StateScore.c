@@ -24,41 +24,45 @@ void Start_StateScore()
         {
             break;
         }
-        if (scoreText[i] == '1')
+        if (scoreText[i] == '0')
         {
-            SpriteManagerAdd(SpriteOne, 8 * i, 0);
+            SpriteManagerAdd(SpriteZero, 80 + 8 * i, 56);
+        }
+        else if (scoreText[i] == '1')
+        {
+            SpriteManagerAdd(SpriteOne, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '2')
         {
-            SpriteManagerAdd(SpriteTwo, 8 * i, 0);
+            SpriteManagerAdd(SpriteTwo, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '3')
         {
-            SpriteManagerAdd(SpriteThree, 8 * i, 0);
+            SpriteManagerAdd(SpriteThree, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '4')
         {
-            SpriteManagerAdd(SpriteFour, 8 * i, 0);
+            SpriteManagerAdd(SpriteFour, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '5')
         {
-            SpriteManagerAdd(SpriteFive, 8 * i, 0);
+            SpriteManagerAdd(SpriteFive, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '6')
         {
-            SpriteManagerAdd(SpriteSix, 8 * i, 0);
+            SpriteManagerAdd(SpriteSix, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '7')
         {
-            SpriteManagerAdd(SpriteSeven, 8 * i, 0);
+            SpriteManagerAdd(SpriteSeven, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '8')
         {
-            SpriteManagerAdd(SpriteEight, 8 * i, 0);
+            SpriteManagerAdd(SpriteEight, 80 + 8 * i, 56);
         }
         else if (scoreText[i] == '9')
         {
-            SpriteManagerAdd(SpriteNine, 8 * i, 0);
+            SpriteManagerAdd(SpriteNine, 80 + 8 * i, 56);
         }
     }
 

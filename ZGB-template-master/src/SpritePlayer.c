@@ -33,7 +33,7 @@ void Update_SpritePlayer()
 
 	if (scoreFrameCount % 60 == 0)
 	{
-		playerScore += 10;
+		playerScore += 1;
 		scoreFrameCount = 0;
 	}
 
