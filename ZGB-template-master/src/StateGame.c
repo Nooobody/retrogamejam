@@ -49,7 +49,7 @@ void Start_StateGame()
 
 void Update_StateGame()
 {
-	if (time % 120 == 0)
+	if (time % 60 == 0)
 	{
 		switch (randw() % 5)
 		{
