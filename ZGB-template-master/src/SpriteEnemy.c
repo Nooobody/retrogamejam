@@ -29,11 +29,12 @@ void Update_SpriteEnemy()
     UINT8 i;
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
 
-    if (THIS->y < 24) {
-      if (TranslateSprite(THIS, data->vx << delta_time, 1 << delta_time))
-      {
-          data->vx = -data->vx;
-      }
+    if (THIS->y < 24)
+    {
+        if (TranslateSprite(THIS, data->vx << delta_time, 1 << delta_time))
+        {
+            data->vx = -data->vx;
+        }
     }
     else if (THIS->y < 140)
     {
@@ -54,25 +55,28 @@ void Update_SpriteEnemy()
         {
             if (CheckCollision(THIS, spr))
             {
-              data->health -= 1;
-              SpriteManagerRemoveSprite(spr);
-              if (data->health == 0) {
-                SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
-                SpriteManagerRemoveSprite(THIS);
-              }
+                data->health -= 1;
+                SpriteManagerRemoveSprite(spr);
+                if (data->health == 0)
+                {
+                    SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
+                    SpriteManagerRemoveSprite(THIS);
+                }
             }
         }
     }
 
-    if (data->frameCount % 50 == 0) {
-      THIS->y += 1;
+    if (data->frameCount % 50 == 0)
+    {
+        THIS->y += 1;
     }
 
-    if (data->frameCount == data->hitFrame && enemyBulletCount < 3) {
-      SpriteManagerAdd(SpriteEnemyBullet, THIS->x, THIS->y + 16);
-      enemyBulletCount++;
-      data->frameCount = 0;
-    } 
+    if (data->frameCount == data->hitFrame && enemyBulletCount < 3)
+    {
+        SpriteManagerAdd(SpriteEnemyBullet, THIS->x, THIS->y + 16);
+        enemyBulletCount++;
+        data->frameCount = 0;
+    }
     data->frameCount++;
 }
 
