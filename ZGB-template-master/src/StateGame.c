@@ -23,7 +23,7 @@ void Start_StateGame()
 {
 	UINT8 i;
 	time = 0;
-        spawnCounter = 0;
+	spawnCounter = 0;
 
 	SPRITES_8x16;
 	for (i = 0; i != N_SPRITE_TYPES; ++i)
@@ -50,7 +50,7 @@ void Update_StateGame()
 {
 	if (time % 120 == 0)
 	{
-		switch (rand() % 4)
+		switch (rand() % 5)
 		{
 		case 0:
 			SpriteManagerAdd(SpriteEnemy, 84 + rand() % 120 - 60, 0);
@@ -62,8 +62,11 @@ void Update_StateGame()
 			SpriteManagerAdd(SpriteEnemy3, 84 + rand() % 120 - 60, 0);
 			break;
 		case 3:
-		default:
 			SpriteManagerAdd(SpriteEnemy4, 84 + rand() % 120 - 60, 0);
+			break;
+		case 4:
+		default:
+			SpriteManagerAdd(SpriteEnemy5, 84 + rand() % 120 - 60, 0);
 		}
                 PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
 		time = 0;
