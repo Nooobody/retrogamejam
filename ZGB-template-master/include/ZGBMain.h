@@ -1,4 +1,3 @@
-#ifndef ZGBMAIN_H
 #define ZGBMAIN_H
 
 #define STATES         \
