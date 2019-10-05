@@ -1,5 +1,7 @@
 #include "Banks/SetBank2.h"
 
+#include <stdlib.h>
+
 #include "..\res\src\tiles.h"
 #include "..\res\src\scrollingmap.h"
 
