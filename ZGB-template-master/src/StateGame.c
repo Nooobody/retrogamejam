@@ -42,7 +42,7 @@ void Update_StateGame()
 {
 	if (time % 10000 == 0)
 	{
-		SpriteManagerAdd(SpriteEnemy, 70, 16);
+		SpriteManagerAdd(SpriteEnemy, 70, 0);
 	}
 	time++;
 }
