@@ -1,6 +1,8 @@
 #include "Banks/SetBank2.h"
+#include "Keys.h"
 #include "SpriteManager.h"
 #include "ZGBMain.h"
+#include "Print.h"
 
 struct EnemyInfo
 {
@@ -30,6 +32,7 @@ void Update_SpriteEnemy()
         {
             if (CheckCollision(THIS, spr))
             {
+                SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
                 SpriteManagerRemoveSprite(spr);
                 SpriteManagerRemoveSprite(THIS);
             }

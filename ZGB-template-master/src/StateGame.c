@@ -24,13 +24,13 @@ void Start_StateGame()
 		SpriteManagerLoad(i);
 	}
 	SHOW_SPRITES;
-	//scroll_target = 
+	//scroll_target =
 	SpriteManagerAdd(SpritePlayer, 50, 130);
 	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
-        SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
-        SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
-        SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	//SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	//SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	//SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
 
 	InitScrollTiles(0, &tiles);
 	InitScroll(&scrollingmap, collision_tiles, 0);
@@ -46,5 +46,4 @@ void Update_StateGame()
 		//SpriteManagerAdd(SpriteEnemy, 70, 50);
 	}
 	time++;
-
 }

@@ -5,11 +5,12 @@
     _STATE(StateGame) \
     STATE_DEF_END
 
-#define SPRITES                       \
-    _SPRITE_DMG(SpritePlayer, player) \
-    _SPRITE_DMG(SpriteEnemy, enemy)   \
-    _SPRITE_DMG(SpriteBullet, bullet) \
-    _SPRITE_DMG(SpriteStars, stars)   \
+#define SPRITES                           \
+    _SPRITE_DMG(SpritePlayer, player)     \
+    _SPRITE_DMG(SpriteEnemy, enemy)       \
+    _SPRITE_DMG(SpriteBullet, bullet)     \
+    _SPRITE_DMG(SpriteStars, stars)       \
+    _SPRITE_DMG(SpriteEnemykys, enemykys) \
     SPRITE_DEF_END
 
 #include "ZGBMain_Init.h"
