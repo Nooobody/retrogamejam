@@ -49,7 +49,6 @@ void Update_SpritePlayer()
         }
 
         if (shooting) {
-          shootFrameCount++;
           if (shootFrameCount % 20 == 0) {
             if (bulletCount < 4)
             {
@@ -57,6 +56,7 @@ void Update_SpritePlayer()
               bulletCount++;
             }
           }
+          shootFrameCount++;
         }
         else if (shootFrameCount % 20 > 0) {
           shootFrameCount++;
