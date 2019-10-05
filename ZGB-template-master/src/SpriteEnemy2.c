@@ -12,7 +12,7 @@ struct EnemyInfo
     UINT8 hitFrame;
 };
 
-void Start_SpriteEnemy()
+void Start_SpriteEnemy2()
 {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
     data->vx = 1;
@@ -21,7 +21,7 @@ void Start_SpriteEnemy()
     data->hitFrame = 150 + rand() % 40 - 20;
 }
 
-void Update_SpriteEnemy()
+void Update_SpriteEnemy2()
 {
     struct Sprite *spr;
     UINT8 i;
@@ -67,6 +67,6 @@ void Update_SpriteEnemy()
     data->frameCount++;
 }
 
-void Destroy_SpriteEnemy()
+void Destroy_SpriteEnemy2()
 {
 }
