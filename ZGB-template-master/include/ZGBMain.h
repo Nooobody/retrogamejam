@@ -17,6 +17,7 @@
     SPRITE_DEF_END
 
 #include "ZGBMain_Init.h"
+
 extern UINT8 bulletCount;
 extern UINT8 score;
 extern UINT8 enemyBulletCount;

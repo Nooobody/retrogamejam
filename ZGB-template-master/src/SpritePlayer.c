@@ -28,13 +28,15 @@ void Start_SpritePlayer()
 void Update_SpritePlayer()
 {
 	UINT8 i;
+	struct Sprite *spr;
+
 	if (scoreFrameCount % 60 == 0)
 	{
-		scoreFrameCount += 10;
+          score += 10;
+          scoreFrameCount = 0;
 	}
 
-	score++;
-	struct Sprite *spr;
+        scoreFrameCount++;
 	if (KEY_PRESSED(J_UP))
 	{
 		TranslateSprite(THIS, 0, -1);
