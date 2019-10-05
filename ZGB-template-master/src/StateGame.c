@@ -25,6 +25,10 @@ void Start_StateGame()
 	scroll_target = SpriteManagerAdd(SpritePlayer, 50, 130);
 	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
+        SpriteManagerAdd(SpriteStar, rand() % 160 + 10, 10);
+        SpriteManagerAdd(SpriteStar, rand() % 160 + 10, 10);
+        SpriteManagerAdd(SpriteStar, rand() % 160 + 10, 10);
+
 	InitScrollTiles(0, &tiles);
 	InitScroll(&scrollingmap, collision_tiles, 0);
 	SHOW_BKG;
