@@ -11,7 +11,7 @@
 void EnemyStart(struct Sprite* THIS) {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
     data->vx = 1;
-    data->vy = 0;
+    data->vy = 1;
     data->frameCount = 1;
     data->hitFrame = 150 + rand() % 40 - 20;
     data->health = 3;
@@ -58,11 +58,6 @@ void EnemyUpdate(struct Sprite* THIS) {
                 }
             }
         }
-    }
-
-    if (data->frameCount % (50 - spawnCounter) == 0)
-    {
-        THIS->y += 1;
     }
 
     if (data->frameCount == data->hitFrame && enemyBulletCount < 3)
