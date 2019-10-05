@@ -24,7 +24,7 @@ void Start_StateGame()
 		SpriteManagerLoad(i);
 	}
 	SHOW_SPRITES;
-	//scroll_target = 
+	//scroll_target =
 	SpriteManagerAdd(SpritePlayer, 50, 130);
 	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
@@ -36,13 +36,7 @@ void Start_StateGame()
 	InitScroll(&scrollingmap, collision_tiles, 0);
 	SHOW_BKG;
 	INIT_CONSOLE(font, 3, 2);
-    MoveScroll(8, 8);
-
-
-<<<<<<< HEAD
-	MoveScroll(1, 1);
-=======
->>>>>>> c370bebc040a746ed042c9789c6bad55574d5503
+	MoveScroll(8, 8);
 }
 
 void Update_StateGame()
@@ -52,5 +46,4 @@ void Update_StateGame()
 		//SpriteManagerAdd(SpriteEnemy, 70, 50);
 	}
 	time++;
-
 }
