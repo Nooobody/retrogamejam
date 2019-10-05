@@ -100,7 +100,7 @@ void Update_SpritePlayer()
 		{
 			if (CheckCollision(THIS, spr))
 			{
-				SetState(StateGame);
+				SetState(StateScore);
 			}
 		}
 	}
