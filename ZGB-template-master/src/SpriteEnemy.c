@@ -1,5 +1,4 @@
 #include "Banks/SetBank2.h"
-#include "Keys.h"
 #include "SpriteManager.h"
 #include "ZGBMain.h"
 
@@ -37,7 +36,6 @@ void Update_SpriteEnemy()
             }
         }
     }
-    DPrintf("x:%d y:%d  ", THIS->x, THIS->y);
 }
 
 void Destroy_SpriteEnemy()
