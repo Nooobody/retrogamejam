@@ -28,8 +28,10 @@ void Update_SpriteEnemy()
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
 
     if (THIS->y < 24) {
-      THIS->x += 1;
-      THIS->y += 1;
+      if (TranslateSprite(THIS, data->vx << delta_time, 1 << delta_time))
+      {
+          data->vx = -data->vx;
+      }
     }
     else if (THIS->y < 140)
     {
