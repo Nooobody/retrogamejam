@@ -5,27 +5,25 @@
 #include "ZGBMain.h"
 struct BulletInfo
 {
-    INT8 vx;
     INT8 vy;
 };
 
 void Start_SpriteBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
-    data->vy = -1;
+    data->vy = -2;
 }
 
 void Update_SpriteBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
-    TranslateSprite(THIS, 0, data->vy);
-    if (TranslateSprite(THIS, data->vx, data->vy))
+    if (TranslateSprite(THIS, 0, data->vy))
     {
         SpriteManagerRemoveSprite(THIS);
-        bulletCount--;
     }
 }
 
 void Destroy_SpriteBullet()
 {
+    bulletCount--;
 }

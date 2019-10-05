@@ -1,7 +1,6 @@
 #include "Banks/SetBank2.h"
-
-#include "Print.h"
 #include "SpriteManager.h"
+#include "ZGBMain.h"
 
 struct EnemyInfo
 {
@@ -18,12 +17,24 @@ void Start_SpriteEnemy()
 
 void Update_SpriteEnemy()
 {
+    struct Sprite *spr;
+    UINT8 i;
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    if (TranslateSprite(THIS, data->vx, data->vy))
+    /*if (TranslateSprite(THIS, data->vx, data->vy))
     {
         data->vx = -data->vx;
+    }*/
+    SPRITEMANAGER_ITERATE(i, spr)
+    {
+        if (spr->type == SpriteBullet)
+        {
+            if (CheckCollision(THIS, spr))
+            {
+                SpriteManagerRemoveSprite(spr);
+                SpriteManagerRemoveSprite(THIS);
+            }
+        }
     }
-    DPrintf("x:%d y:%d  ", THIS->x, THIS->y);
 }
 
 void Destroy_SpriteEnemy()

@@ -7,17 +7,18 @@
 
 UINT8 frameCount = 0;
 
-struct StarInfo {
-  UINT8 vy;
+struct StarInfo
+{
+    UINT8 vy;
 };
 
-void Start_SpriteStar()
+void Start_SpriteStars()
 {
     struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
     data->vy = rand() % 5;
 }
 
-void Update_SpriteStar()
+void Update_SpriteStars()
 {
     struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
     if (frameCount % data->vy == 0 && TranslateSprite(THIS, 0, 1))
@@ -27,8 +28,7 @@ void Update_SpriteStar()
     frameCount++;
 }
 
-void Destroy_SpriteStar()
+void Destroy_SpriteStars()
 {
     SpriteManagerAdd(SpriteStar, rand() % 120 + 30, 10);
 }
-
