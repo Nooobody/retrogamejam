@@ -5,7 +5,7 @@
 #include "ZGBMain.h"
 #include "Print.h"
 
-UINT8 frameCount = 0;
+// UINT8 frameCount = 0;
 
 // struct StarInfo
 // {
@@ -26,7 +26,7 @@ void Update_SpriteStars()
     {
         SpriteManagerRemoveSprite(THIS);
     }
-    frameCount++;
+    // frameCount++;
 }
 
 void Destroy_SpriteStars()
