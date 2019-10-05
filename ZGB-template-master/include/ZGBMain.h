@@ -4,6 +4,7 @@
 #define STATES         \
     _STATE(StateIntro) \
     _STATE(StateGame)  \
+    _STATE(StateScore) \
     STATE_DEF_END
 
 #define SPRITES                           \
@@ -16,5 +17,6 @@
 
 #include "ZGBMain_Init.h"
 extern UINT8 bulletCount;
+extern UINT8 score;
 
 #endif
