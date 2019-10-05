@@ -18,7 +18,7 @@ void Start_SpriteEnemyBullet()
 void Update_SpriteEnemyBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
-    THIS->y += 2;
+    THIS->y += data->vy << delta_time;
     // if (TranslateSprite(THIS, 0, data->vy))
     // {
         // SpriteManagerRemoveSprite(THIS);

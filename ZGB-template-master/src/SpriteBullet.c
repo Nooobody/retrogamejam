@@ -17,10 +17,7 @@ void Start_SpriteBullet()
 void Update_SpriteBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
-    if (TranslateSprite(THIS, 0, data->vy))
-    {
-        SpriteManagerRemoveSprite(THIS);
-    }
+    THIS->y += data->vy << delta_time;
 }
 
 void Destroy_SpriteBullet()

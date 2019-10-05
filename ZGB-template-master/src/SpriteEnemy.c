@@ -29,15 +29,15 @@ void Update_SpriteEnemy()
 
     if (THIS->y < 140)
     {
-        if (TranslateSprite(THIS, data->vx, data->vy))
+        if (TranslateSprite(THIS, data->vx << delta_time, data->vy << delta_time))
         {
             data->vx = -data->vx;
         }
     }
     else
     {
-        THIS->x += data->vx;
-        THIS->y += data->vy;
+        THIS->x += data->vx << delta_time;
+        THIS->y += data->vy << delta_time;
     }
 
     SPRITEMANAGER_ITERATE(i, spr)

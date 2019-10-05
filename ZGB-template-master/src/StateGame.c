@@ -29,6 +29,7 @@ void Start_StateGame()
 	SpriteManagerAdd(SpritePlayer, 50, 130);
 
 	SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 100);
 
 	InitScrollTiles(0, &tiles);
 	InitScroll(&scrollingmap, collision_tiles, 0);
