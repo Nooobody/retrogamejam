@@ -14,6 +14,7 @@
     _SPRITE_DMG(SpriteEnemyBullet, enemybullet) \
     _SPRITE_DMG(SpriteStars, stars)             \
     _SPRITE_DMG(SpriteEnemykys, enemykys)       \
+    _SPRITE_DMG(SpritePlayerkys, playerkys)     \
     SPRITE_DEF_END
 
 #include "ZGBMain_Init.h"

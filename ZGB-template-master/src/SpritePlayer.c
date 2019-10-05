@@ -104,7 +104,8 @@ void Update_SpritePlayer()
 		{
 			if (CheckCollision(THIS, spr))
 			{
-				SetState(StateScore);
+				SpriteManagerRemoveSprite(THIS);
+				//SetState(StateScore);
 			}
 		}
 	}
@@ -116,4 +117,5 @@ void Update_SpritePlayer()
 
 void Destroy_SpritePlayer()
 {
+	SpriteManagerAdd(SpritePlayerkys, THIS->x - 8, THIS->y - 8);
 }
