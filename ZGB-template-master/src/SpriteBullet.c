@@ -11,7 +11,7 @@ struct BulletInfo
 void Start_SpriteBullet()
 {
     struct BulletInfo *data = (struct BulletInfo *)THIS->custom_data;
-    data->vy = -2;
+    data->vy = -8;
 }
 
 void Update_SpriteBullet()
