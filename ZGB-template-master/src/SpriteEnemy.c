@@ -59,7 +59,7 @@ void Update_SpriteEnemy()
         }
     }
 
-    if (data->frameCount % 100) {
+    if (data->frameCount % 100 == 0) {
       THIS->y += 1;
     }
 
