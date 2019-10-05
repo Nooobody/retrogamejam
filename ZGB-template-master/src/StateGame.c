@@ -50,14 +50,14 @@ void Update_StateGame()
 	{
           switch (rand() % 3) {
             case 0:
-		SpriteManagerAdd(SpriteEnemy, rand() % 120 + 28, 0);
+		SpriteManagerAdd(SpriteEnemy, 84 + rand() % 120 - 60, 0);
                 break;
             case 1:
-		SpriteManagerAdd(SpriteEnemy2, rand() % 120 + 28, 0);
+		SpriteManagerAdd(SpriteEnemy2, 84 + rand() % 120 - 60, 0);
                 break;
             case 2:
             default:
-                SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
+                SpriteManagerAdd(SpriteEnemy3, 84 + rand() % 120 - 60, 0);
           }
           PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
           time = 0;
