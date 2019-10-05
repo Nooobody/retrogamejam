@@ -71,7 +71,7 @@ void Update_SpritePlayer()
 	}
 	frameCount++;
 
-        if (shootFrameCount > 100) {
+        if (shootFrameCount == 100) {
           shootFrameCount = 0;
         }
 
