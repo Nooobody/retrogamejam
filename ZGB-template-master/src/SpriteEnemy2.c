@@ -59,6 +59,10 @@ void Update_SpriteEnemy2()
         }
     }
 
+    if (data->frameCount % 100) {
+      THIS->y += 1;
+    }
+
     if (data->frameCount == data->hitFrame && enemyBulletCount < 3) {
       SpriteManagerAdd(SpriteEnemyBullet, THIS->x, THIS->y + 16);
       enemyBulletCount++;
