@@ -20,10 +20,10 @@ void Update_SpriteBullet()
     if (TranslateSprite(THIS, 0, data->vy))
     {
         SpriteManagerRemoveSprite(THIS);
-        bulletCount--;
     }
 }
 
 void Destroy_SpriteBullet()
 {
+    bulletCount--;
 }

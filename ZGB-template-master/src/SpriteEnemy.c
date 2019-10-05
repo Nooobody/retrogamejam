@@ -32,7 +32,6 @@ void Update_SpriteEnemy()
             {
                 SpriteManagerRemoveSprite(spr);
                 SpriteManagerRemoveSprite(THIS);
-                bulletCount--;
             }
         }
     }
