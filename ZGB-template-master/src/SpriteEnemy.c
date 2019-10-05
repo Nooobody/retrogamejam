@@ -16,7 +16,8 @@ void Start_SpriteEnemy()
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
     data->vx = 2;
     data->vy = 0;
-    data->frameCount = 0;
+    data->frameCount = 1;
+    data->hitFrame = 150 + rand() % 40 - 20;
 }
 
 void Update_SpriteEnemy()
@@ -51,15 +52,12 @@ void Update_SpriteEnemy()
         }
     }
 
-    if (data->frameCount % 150 == 0 && enemyBulletCount < 3) {
+    if (data->frameCount == data->hitFrame && enemyBulletCount < 3) {
       SpriteManagerAdd(SpriteEnemyBullet, THIS->x, THIS->y + 16);
       enemyBulletCount++;
-    } 
-
-    data->frameCount++;
-    if (data->frameCount == 300) {
       data->frameCount = 0;
-    }
+    } 
+    data->frameCount++;
 }
 
 void Destroy_SpriteEnemy()
