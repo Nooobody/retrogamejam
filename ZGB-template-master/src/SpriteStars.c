@@ -6,7 +6,7 @@
 #include "Print.h"
 
 UINT8 frameCount = 0;
-const UINT8 anim_idle[] = {2, 0, 1}; //The first number indicates the number of frames
+const UINT8 star_anim_idle[] = {2, 0, 1}; //The first number indicates the number of frames
 
 struct StarInfo
 {
@@ -27,7 +27,7 @@ void Update_SpriteStars()
         SpriteManagerRemoveSprite(THIS);
     }
     frameCount++;
-    SetSpriteAnim(THIS, anim_idle, 15);
+    SetSpriteAnim(THIS, star_anim_idle, 15);
 }
 
 void Destroy_SpriteStars()
