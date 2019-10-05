@@ -23,6 +23,7 @@ void Start_StateGame()
 	}
 	SHOW_SPRITES;
 	scroll_target = SpriteManagerAdd(SpritePlayer, 50, 130);
+	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
 	InitScrollTiles(0, &tiles);
 	InitScroll(&scrollingmap, collision_tiles, 0);
