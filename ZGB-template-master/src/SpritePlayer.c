@@ -10,7 +10,7 @@ UINT8 frameCount = 0;
 UINT8 shootFrameCount = 0;
 UINT8 scoreFrameCount = 0;
 UINT8 bulletCount;
-UINT8 score;
+UINT8 playerScore;
 UINT8 enemyBulletCount;
 UINT8 playerX;
 UINT8 playerY;
@@ -20,21 +20,19 @@ BOOLEAN shooting;
 void Start_SpritePlayer()
 {
 	bulletCount = 0;
-	score = 0;
+	playerScore = 0;
 	shooting = FALSE;
-        enemyBulletCount = 0;
+	enemyBulletCount = 0;
 }
 
 void Update_SpritePlayer()
 {
 	UINT8 i;
+	struct Sprite *spr;
 	if (scoreFrameCount % 60 == 0)
 	{
-		scoreFrameCount += 10;
+		playerScore += 10;
 	}
-
-	score++;
-	struct Sprite *spr;
 	if (KEY_PRESSED(J_UP))
 	{
 		TranslateSprite(THIS, 0, -1);
