@@ -32,7 +32,6 @@ void Update_SpriteEnemy()
         {
             if (CheckCollision(THIS, spr))
             {
-                SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
                 SpriteManagerRemoveSprite(spr);
                 SpriteManagerRemoveSprite(THIS);
             }
@@ -42,4 +41,5 @@ void Update_SpriteEnemy()
 
 void Destroy_SpriteEnemy()
 {
+  SpriteManagerAdd(SpriteEnemykys, THIS->x, THIS->y);
 }
