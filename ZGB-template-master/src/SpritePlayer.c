@@ -10,7 +10,11 @@ UINT8 frameCount = 0;
 UINT8 shootFrameCount = 0;
 UINT8 scoreFrameCount = 0;
 UINT8 bulletCount;
+<<<<<<< HEAD
 UINT8 score;
+=======
+UINT8 enemyBulletCount;
+>>>>>>> 49bf64cadab163331ccc40e58d6bbb9d0bff505e
 UINT8 playerX;
 UINT8 playerY;
 
@@ -19,8 +23,13 @@ BOOLEAN shooting;
 void Start_SpritePlayer()
 {
 	bulletCount = 0;
+<<<<<<< HEAD
 	score = 0;
 	shooting = FALSE;
+=======
+        enemyBulletCount = 0;
+        shooting = FALSE;
+>>>>>>> 49bf64cadab163331ccc40e58d6bbb9d0bff505e
 }
 
 void Update_SpritePlayer()

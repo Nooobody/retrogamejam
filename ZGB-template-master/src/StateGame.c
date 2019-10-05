@@ -14,6 +14,7 @@
 
 UINT8 collision_tiles[] = {1, 0};
 UINT8 time = 0;
+
 void Start_StateGame()
 {
 	UINT8 i;
