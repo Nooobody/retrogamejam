@@ -8,6 +8,7 @@
 #include "ZGBMain.h"
 #include "Scroll.h"
 #include "SpriteManager.h"
+#include "Sound.h"
 
 #include "Print.h"
 #include "../res/src/font.h"
@@ -58,6 +59,7 @@ void Update_StateGame()
             default:
                 SpriteManagerAdd(SpriteEnemy3, rand() % 120 + 28, 0);
           }
+          PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
           time = 0;
 	}
 	time++;

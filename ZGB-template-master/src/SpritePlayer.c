@@ -117,5 +117,6 @@ void Update_SpritePlayer()
 
 void Destroy_SpritePlayer()
 {
-	SpriteManagerAdd(SpritePlayerkys, THIS->x - 8, THIS->y - 8);
+	PlayFx(CHANNEL_1, 10, 0x4f, 0xc7, 0xf3, 0x73, 0x86);
+        SpriteManagerAdd(SpritePlayerkys, THIS->x - 8, THIS->y - 8);
 }
