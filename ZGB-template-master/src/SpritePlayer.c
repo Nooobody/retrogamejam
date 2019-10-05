@@ -9,6 +9,7 @@ const UINT8 anim_walk[] = {2, 1, 2};
 UINT8 frameCount = 0;
 UINT8 shootFrameCount = 0;
 UINT8 bulletCount;
+UINT8 enemyBulletCount;
 UINT8 playerX;
 UINT8 playerY;
 
@@ -17,6 +18,7 @@ BOOLEAN shooting;
 void Start_SpritePlayer()
 {
 	bulletCount = 0;
+        enemyBulletCount = 0;
         shooting = FALSE;
 }
 
