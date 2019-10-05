@@ -16,7 +16,7 @@ struct EnemyInfo
 void Start_SpriteEnemy2()
 {
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
-    data->vx = 1;
+    data->vx = 1 + spawnCounter / 5;
     data->vy = 0;
     data->frameCount = 1;
     data->hitFrame = 150 + rand() % 40 - 20;
@@ -65,7 +65,7 @@ void Update_SpriteEnemy2()
         }
     }
 
-    if (data->frameCount % 50 == 0) {
+    if (data->frameCount % (50 - spawnCounter / 5) == 0) {
       THIS->y += 1;
     }
 

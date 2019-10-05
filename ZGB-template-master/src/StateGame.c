@@ -15,6 +15,7 @@
 
 UINT8 collision_tiles[] = {1, 0};
 UINT8 time = 0;
+extern UINT8 spawnCounter = 0;
 
 extern UINT8 vittujes_mod_data[];
 
@@ -61,6 +62,7 @@ void Update_StateGame()
           }
           PlayFx(CHANNEL_4, 4, 0x0c, 0x41, 0x30, 0xc0);
           time = 0;
+          spawnCounter++;
 	}
 	time++;
 }
