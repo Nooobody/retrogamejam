@@ -7,22 +7,22 @@
 
 UINT8 frameCount = 0;
 
-struct StarInfo
-{
-    UINT8 vy;
-};
+// struct StarInfo
+// {
+    // UINT8 vy;
+// };
 
 void Start_SpriteStars()
 {
-    struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
+    // struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
     //data->vy = rand() % 2 + 1;
-    data->vy = 1;
+    //data->vy = 2;
 }
 
 void Update_SpriteStars()
 {
-    struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
-    if (frameCount % data->vy == 0 && TranslateSprite(THIS, 0, 1))
+    // struct StarInfo *data = (struct StarInfo *)THIS->custom_data;
+    if (TranslateSprite(THIS, 0, 4))
     {
         SpriteManagerRemoveSprite(THIS);
     }
