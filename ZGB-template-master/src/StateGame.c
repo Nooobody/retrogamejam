@@ -27,16 +27,16 @@ void Start_StateGame()
 	scroll_target = SpriteManagerAdd(SpritePlayer, 50, 130);
 	SpriteManagerAdd(SpriteEnemy, 70, 50);
 
-        SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
-        SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
-        SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	//SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	//SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
+	//SpriteManagerAdd(SpriteStars, rand() % 120 + 30, 10);
 
 	InitScrollTiles(0, &tiles);
 	InitScroll(&scrollingmap, collision_tiles, 0);
 	SHOW_BKG;
 	INIT_CONSOLE(font, 3, 2);
 
-        MoveScroll(1, 1);
+	MoveScroll(1, 1);
 }
 
 void Update_StateGame()
