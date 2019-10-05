@@ -15,6 +15,8 @@
 UINT8 collision_tiles[] = {1, 0};
 UINT8 time = 0;
 
+extern UINT8 vittujes_mod_data[];
+
 void Start_StateGame()
 {
 	UINT8 i;
@@ -37,6 +39,8 @@ void Start_StateGame()
 	SHOW_BKG;
 	INIT_CONSOLE(font, 3, 2);
 	MoveScroll(8, 16);
+
+        PlayMusic(vittujes_mod_data, 3, 1);
 }
 
 void Update_StateGame()
