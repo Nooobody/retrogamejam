@@ -48,11 +48,11 @@ void Update_SpritePlayer()
 	}
 	if (KEY_PRESSED(J_LEFT))
 	{
-		TranslateSprite(THIS, -1 << delta_time, 0);
+		TranslateSprite(THIS, -2 << delta_time, 0);
 	}
 	if (KEY_PRESSED(J_RIGHT))
 	{
-		TranslateSprite(THIS, 1 << delta_time, 0);
+		TranslateSprite(THIS, 2 << delta_time, 0);
 	}
 	if (KEY_PRESSED(J_B))
 	{
@@ -119,5 +119,5 @@ void Update_SpritePlayer()
 void Destroy_SpritePlayer()
 {
 	PlayFx(CHANNEL_1, 10, 0x4f, 0xc7, 0xf3, 0x73, 0x86);
-        SpriteManagerAdd(SpritePlayerkys, THIS->x - 8, THIS->y - 8);
+	SpriteManagerAdd(SpritePlayerkys, THIS->x - 8, THIS->y - 8);
 }
