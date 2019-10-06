@@ -13,6 +13,10 @@
 #include "Print.h"
 #include "../res/src/font.h"
 
+#include "rand.h"
+
+UINT8 frameCount = 0;
+
 void Start_StateIntro()
 {
     UINT8 i;
@@ -40,8 +44,10 @@ void Start_StateIntro()
 
 void Update_StateIntro()
 {
+    frameCount++;
     if (KEY_PRESSED(J_START))
     {
+        initarand((unsigned int)frameCount);
         SetState(StateGame);
     }
 }

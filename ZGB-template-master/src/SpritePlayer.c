@@ -65,9 +65,9 @@ void Update_SpritePlayer()
 
 	if (shooting)
 	{
-		if (shootFrameCount % 20 == 0)
+		if (shootFrameCount % 10 == 0)
 		{
-			if (bulletCount < 1)
+			if (bulletCount < 2)
 			{
 				SpriteManagerAdd(SpriteBullet, playerX, playerY - 8);
 				bulletCount++;

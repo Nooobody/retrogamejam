@@ -8,16 +8,20 @@
 #include "ZGBMain.h"
 #include "EnemyBase.h"
 
-void EnemyStart(struct Sprite* THIS) {
+#include "rand.h"
+
+void EnemyStart(struct Sprite *THIS)
+{
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
     data->vx = 1;
     data->vy = 1;
     data->frameCount = 1;
-    data->hitFrame = 150 + rand() % 40 - 20;
+    data->hitFrame = 50 + randW() % 40 - 20;
     data->health = 3;
 }
 
-void EnemyUpdate(struct Sprite* THIS) {
+void EnemyUpdate(struct Sprite *THIS)
+{
     struct Sprite *spr;
     UINT8 i;
     struct EnemyInfo *data = (struct EnemyInfo *)THIS->custom_data;
@@ -69,7 +73,8 @@ void EnemyUpdate(struct Sprite* THIS) {
     data->frameCount++;
 }
 
-void EnemyDestroy(struct Sprite* THIS) {
+void EnemyDestroy(struct Sprite *THIS)
+{
 }
 
 #endif
